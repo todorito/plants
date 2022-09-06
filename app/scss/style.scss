@@ -1,0 +1,304 @@
+%extend-container-parent {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    min-height: 600px;
+    width: 70%;
+    background-color: rgb(210, 214, 184);
+    border-radius: 5px;
+    // height: 70vh;
+}
+
+%extend-container-child {
+    flex-basis: 50%;
+    height: 100%;
+}
+
+* {
+    font-family: monospace;
+}
+
+.container {
+    background: linear-gradient(to right, #bbff00, #13652a);
+    color: rgb(53, 36, 6);
+
+    .list {
+        list-style: none;
+        text-align: center;
+        background-color: rgb(250, 235, 215);
+        margin: 3em;
+        display: flex;
+        justify-content: center;
+
+        .nav-item {
+            display: inline-block;
+            padding: 1em;
+            font-size: larger;
+            font-weight: bolder;
+            margin: 1em;
+            color: rgb(97, 23, 7);
+            text-decoration: none;
+
+            &:hover {
+                color: rgb(250, 235, 215);
+                background-color: rgb(97, 23, 7);
+            }
+        }
+
+    }
+
+    .title {
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .main {
+        @extend %extend-container-parent;
+
+        .homepage-img-container {
+            @extend %extend-container-child;
+            height: 80vh;
+
+
+            .homepage-img {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                object-fit: cover;
+            }
+        }
+
+        .main-text {
+            @extend %extend-container-child;
+            margin: 1em;
+            // flex-grow: 1;
+            flex-basis: 50%;
+            font-size: 20px;
+
+            #plant-output {
+                display: flex;
+            }
+        }
+
+        .plant-name-output {
+            font-weight: bold;
+            color: #571b1b;
+            text-align: center;
+        }
+
+        .plant-photo-output {
+            min-height: 400px;
+            width: 400px;
+            // // text-align: center;
+            // display: flex;
+            // justify-content: center;
+            position: relative;
+            // width: 100%;
+            // height: 400px;
+            // overflow: hidden;
+
+            img {
+                border-radius: 25px;
+                // max-width: 100%;
+                // height: auto;
+                width: 200px;
+                // // margin: 0 auto;
+                // // display: block;
+                // // object-fit: cover;
+                position: absolute;
+                // display: block;
+                // height: auto;
+                // margin: 0 auto;
+                // top: 0;
+                // z-index: 0;
+                // min-height: 100%;
+                // width: 100%;
+                left: 50%;
+                // -webkit-transform: translateX(50%);
+                // transform: translateX(50%);
+            }
+        }
+
+        .plant-header-output {
+            color: darkmagenta;
+            font-weight: 500;
+            margin: 15px;
+
+            .text-plant-info {
+                color: black;
+                font-weight: 100;
+            }
+        }
+
+    }
+
+    .footer {
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .main-child {
+        @extend %extend-container-child;
+
+
+        .go-back {
+            background-color: rgb(45, 28, 99);
+            border: 0.5px solid #ffffff;
+            font-size: large;
+            padding: 7px;
+            border-radius: 10px;
+            color: #ffffff;
+            margin: 10px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+
+
+
+        // change properties
+        .plants {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: #115693;
+            color: aliceblue;
+            padding: 2px;
+            border: 1px solid grey;
+            margin: 2px;
+        }
+
+        .warning {
+            color: red;
+            margin: 0 1em;
+            flex-basis: 50%;
+            font-size: 15px;
+        }
+
+        .main-search {
+            position: relative;
+            margin: 0 auto;
+
+            .submit-plant {
+                background-color: cadetblue;
+                border: 0.5px solid #ffffff;
+                padding: 5px;
+                border-radius: 10px;
+                color: #ffffff;
+
+
+                &:active {
+                    color: rgb(250, 235, 215);
+                    background-color: rgb(97, 23, 7);
+                }
+            }
+
+            .btn-a-z {
+                background-color: #115693;
+                padding: 5px;
+                border: 1px solid #13652a;
+                color: #ffffff;
+
+                &:active {
+                    color: rgb(250, 235, 215);
+                    background-color: rgb(97, 23, 7);
+                }
+            }
+        }
+    }
+
+    .calendar {
+        text-align: center;
+
+        .month-line,
+        .day-line {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .current-year {
+                text-align: center;
+            }
+
+            .arrow {
+                color: brown;
+                font-size: larger;
+                font-weight: 900;
+                max-width: 1em;
+                background-color: rgb(240, 245, 240);
+                border-radius: 5px;
+            }
+
+            .item {
+                flex-grow: 1;
+            }
+
+            .spacing {
+                padding: 0.5em;
+            }
+
+        }
+
+        .calendar-main {
+            margin: 0 auto;
+            border-collapse: collapse;
+
+            .parent-flex {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // justify-content: center;
+                // align-content: center;
+
+
+                .child-flex {
+                    flex-basis: 14.2%;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+            }
+
+
+            .table-row {
+
+                .selected {
+                    background-color: purple;
+                    color: #ffffff;
+                    opacity: 0.8;
+                }
+
+                .today {
+                    background-color: #365421;
+                    color: #ffffff;
+
+                }
+
+                //border: 3px solid #ff2200;
+                .blanc {
+                    background-color: #ffffff;
+                    border: 1px solid #13652a;
+                }
+
+                .table-head {
+                    background-color: #13652a;
+                    color: rgb(250, 235, 215);
+                    padding: 1rem 0rem;
+                }
+
+                .table-data {
+                    padding: 1rem 0rem;
+                    border: 1px solid #13652a;
+                }
+
+                .table-border-right {
+                    border-right: 1px solid #ffffff;
+                }
+            }
+        }
+    }
+}

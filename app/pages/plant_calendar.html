@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature & Plants</title>
+    <link rel="stylesheet" href="../../dist/style.css" />
+</head>
+
+<body class="container">
+    <header>
+        <h1 class="title">Nature & Plants</h1>
+        <nav class="nav-bar">
+            <ul class="list">
+                <li><a class="nav-item" href="../../index.html">Home</a></li>
+                <li><a class="nav-item" href="#">Planting Calendar</a></li>
+                <li><a class="nav-item" href="./plant_info.html">Planting Info</a></li>
+                <li><a class="nav-item" href="./fruits_veggies.html">Fruits & Veggies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main-child calendar">
+            <h3>Calendar 🌱</h3>
+            <div class="current-time">
+                <div class="month-line">
+                    <span class="item arrow" id="arrow-left">&#8249;</span>
+                    <h2 class="current-month item"><strong>Jul</strong></h2>
+                    <span class="item arrow" id="arrow-right">&#8250;</span>
+                </div>
+                <div class="day-line">
+                    <h4 class="current-day spacing toggle-spacing"><span>Wednesday</span> </h4>
+                    <h4 class="spacing toggle-spacing"><span class="current-date">11</span></h4>
+                    <h4 class="spacing toggle-spacing"><span class="current-year">202</span></h4>
+                </div>
+            </div>
+            <div class="calendar-main">
+                <div class="table-row parent-flex">
+                    <div class="child-flex table-head table-border-right table-data">Mon</div>
+                    <div class="child-flex table-head table-border-right">Tue</div>
+                    <div class="child-flex table-head table-border-right">Wed</div>
+                    <div class="child-flex table-head table-border-right">Thur</div>
+                    <div class="child-flex table-head table-border-right">Fri</div>
+                    <div class="child-flex table-head table-border-right">Sat</div>
+                    <div class="child-flex table-head table-data">Sun</div>
+                </div>
+                <div class="table-row parent-flex" id="dates">
+                </div>
+            </div>
+        </div>
+        <aside class="main-text">
+            <h2>Planting Calendar</h2>
+            <p>Select every how many days you want to water : </p>
+            <select>
+                <option>1 Day</option>
+                <option>2 Day</option>
+                <option>3 Day</option>
+                <option>4 Day</option>
+            </select>
+            <p>Select how many times a day you need to water </p>
+            <select>
+                <option>1 time</option>
+                <option>2 times</option>
+                <option>3 times</option>
+            </select>
+        </aside>
+    </main>
+    <footer class="footer"><small>Copyright © 2022 DS</small></footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
